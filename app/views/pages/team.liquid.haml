@@ -1,0 +1,31 @@
+{% extends 'parent' %}
+
+
+{% block 'main' %}
+/ Main hero unit for a primary marketing message or call to action
+
+.hero-unit
+  %h1 Meet our Staff 
+  %p 
+    {% editable_short_text "meet_our_staff_us_intro", hint: "Meet Our Staff Intro", priority: 1 %}
+    Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+    {% endeditable_short_text %}
+/ Example row of columns
+.row
+  {%for team_category in contents.team_categories %}
+  {%for team_member in team_category.team_members %} 
+  .span4
+    %h2 {{team_member.first_name}} {{team_member.last_name}}
+    %h3 {{team_category.name}}
+    %h4 {{team_member.title}}
+
+    %a{:href => "/team/{{team_member._permalink}}"} 
+      %img{:src => "{{team_member.image.url}}"}
+    %p {{team_member.excerpt}}
+    %p
+      %a.btn{:href => "/team/{{team_member._permalink}}"} View details »
+
+  {%endfor %}
+  {%endfor %}
+
+{% endblock %}

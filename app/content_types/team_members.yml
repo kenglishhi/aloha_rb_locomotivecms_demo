@@ -1,0 +1,33 @@
+name: Team Members
+slug: team_members
+order_by: manually
+fields:
+- first_name:
+    label: First Name
+    type: string
+- last_name:
+    label: Last Name
+    type: string
+- title:
+    label: Title
+    type: string
+    required: false
+- image:
+    label: Image
+    type: file
+    hint: "Image of Team Member"
+- bio:
+    label: Bio
+    type: text
+    text_formatting: html
+    hint: The body of the article
+- excerpt:
+    label: Exceprt
+    type: text
+    hint: Short text displayed on the home page.
+- team_category:
+    label: Team Category
+    type: belongs_to
+    hint: Category for this Team Members
+    target: team_categories
+    inverse_of: team_members

@@ -1,0 +1,15 @@
+{% extends 'parent' %}
+
+{% block 'main' %}
+/ Main hero unit for a primary marketing message or call to action
+
+.hero-unit
+  %h1 {{team_member.first_name}} {{team_member.last_name}} 
+  %h3 {{team_member.team_category.name}}
+  %h3 {{team_member.title}}
+
+  %a{:href => "/team/{{team_member._permalink}}"} 
+    %img{:src => "{{team_member.image.url}}"}
+  {{team_member.bio}}
+
+{% endblock %}

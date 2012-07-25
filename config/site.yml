@@ -1,0 +1,29 @@
+site:
+  name: Aloha Ruby Consulting
+
+  locales: [en, es]
+
+  seo_title: aloha_ruby_consulting
+  meta_keywords: "some meta keywords"
+  meta_description: "some meta description"
+
+  pages:
+    - "index": 
+        title: "Home page"
+        published: true
+    - "about": 
+        title: "About"
+        published: true
+        listing: true
+    - "team": 
+        title: "Team"
+        published: true
+        listing: true
+    - "team/content_type_template":
+        templatized: true
+        published: true
+        title: Team Members 
+        model: team_members
+    - "404":
+        title: "Page not found"
+        published: true

@@ -1,0 +1,17 @@
+{% extends 'parent' %}
+{% block 'main' %}
+/ Main hero unit for a primary marketing message or call to action
+
+.hero-unit
+  %h1 About Us
+  %p 
+    {% editable_short_text "about_us_intro", hint: "About Us Intro", priority: 1 %}
+    Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+    {% endeditable_short_text %}
+
+  %p
+    %a.btn.primary.large Learn more »
+/ Example row of columns
+
+
+{% endblock %}

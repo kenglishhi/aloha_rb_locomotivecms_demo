@@ -1,0 +1,12 @@
+development:
+  host: dev.example.com
+  email: john@doe.net
+  password: easyone
+staging:
+  host: localhost:8080
+  email: kenglish@gmail.com
+  password: kevin123
+production:
+  host: www.example.com
+  email: john@doe.net
+  password: easyone

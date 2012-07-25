@@ -1,0 +1,18 @@
+name: Team Category
+order_by: manually
+slug: team_categories
+label_field_name: name
+fields:
+- name:
+    label: Category Name
+    type: string
+- summary:
+    label: Summary
+    type: string
+- team_members:
+    label: Team Members
+    type: has_many
+    hint: Team Members of this Category
+    required: false
+    target: team_members
+    inverse_of: team_category
