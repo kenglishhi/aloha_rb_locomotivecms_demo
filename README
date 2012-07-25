@@ -1,1 +1,26 @@
 This is a demo of a locomotive editor site for a talk giving at Aloha Ruby Conference.
+
+Note the content_types, this is the corret way to get a master detail record working.
+Running locally:
+
+  1) Goto folder above main folder
+  2) locomotive_editor run  aloha_rb_locomotivecms_demo
+
+Deploying:
+
+1) goto directory above 'aloha_rb_locomotivecms_demo' git repo location.
+
+2) cherry pick:
+     locomotive_editor push -n aloha_rb_locomotivecms_demo -r content_types -t staging
+     locomotive_editor push -n aloha_rb_locomotivecms_demo -r theme_assets -t staging
+     locomotive_editor push -n aloha_rb_locomotivecms_demo -r snippets -t staging
+     locomotive_editor push -n aloha_rb_locomotivecms_demo -r pages -t staging
+
+3) Overwrite everything...
+     locomotive_editor push -n aloha_rb_locomotivecms_demo -r all -t staging
+
+(optional) to overwrite EVERYTHING, like really don't do this unless you are sure:
+     locomotive_editor push -n aloha_rb_locomotivecms_demo -r all -t staging —-force
+
+
+
